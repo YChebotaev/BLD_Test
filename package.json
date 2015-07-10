@@ -1,0 +1,14 @@
+{
+  "name": "test-task",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "config": "^1.14.0",
+    "request": "^2.58.0",
+    "kue": "^0.9.3",
+    "lodash": "^3.10.0",
+    "node-feedparser": "^1.0.1",
+    "mkdirp": "^0.5.1"
+  },
+  "devDependencies": {}
+}

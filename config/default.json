@@ -1,0 +1,30 @@
+{
+    "PORT": 8080,
+    "HOST": "0.0.0.0",
+    "MODULES": [
+        {
+            "REQUIRE_PATH": "./modules/default"
+        },
+        {
+            "REQUIRE_PATH": "./modules/scheduler",
+            "SITES": [
+                {
+                    "startUri": "http://bitcoinwarrior.net/feed/",
+                    "updateInterval": 60000,
+                    "attepmts": 1,
+                    "backoff": 3000,
+                    "channel": "btcw"
+                }
+            ]
+        },
+        {
+           "REQUIRE_PATH": "./modules/fetch",
+           "requestDefaults": {}
+        },
+        {
+            "REQUIRE_PATH": "./modules/bitcoinwarrior_net",
+            "channel": "btcw",
+            "filename": "./results/bitcoinwarrior_net.json"
+        }
+    ]
+}
