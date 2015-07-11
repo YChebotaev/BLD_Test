@@ -14,7 +14,6 @@ _.forEach(modules, function(moduleConfig){
     var require_path = moduleConfig.REQUIRE_PATH;
     var Module = require(require_path);
     Modules.push(Module)
-    Module.validateConfig(moduleConfig);
     Module.configure(moduleConfig);
     Module.queues = queues;
     Module.createQueue(queues, kue);
